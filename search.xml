@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Markdown学习笔记</title>
+    <url>/2020/02/21/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>List 标记后面跟一个以上的空格或者一个Tab，列表项可能包含多个段落， 列表项中的每个段落都必须用 4 个空格或一个Tab来缩进。</p>
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>使用星号、加号和连字符，这些符号是可互换的。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">* </span>Red</span><br><span class="line"><span class="bullet">+ </span>Red</span><br><span class="line"><span class="bullet">- </span>Red</span><br></pre></td></tr></table></figure>
+
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>使用数字加句号。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1. </span>Red</span><br><span class="line"><span class="bullet">2. </span>Blue</span><br></pre></td></tr></table></figure>
+
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```</span></span><br><span class="line"><span class="code">function f() &#123;</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="水平线"><a href="#水平线" class="headerlink" title="水平线"></a>水平线</h3><p>一行中只有三个以上的连字符、星号或者下划线。星号和连字符之间的空格是允许的。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* * *</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure>
+
+<h2 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h2><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>可以放一个 <em>可选</em> 的链接标题，标题要用引号包围。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">This is [<span class="string">an example</span>](<span class="link">http://example.com/ "Title"</span>) inline link.</span><br><span class="line"></span><br><span class="line">[<span class="string">This link</span>](<span class="link">http://example.net/</span>) has no title attribute.</span><br></pre></td></tr></table></figure>
+
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>用 <code>*</code> 或者 <code>_</code> 包裹的文本将会用 HTML <code>&lt;em&gt;</code> 标签包裹； 双 <code>*</code> 或者 <code>_</code> 将会用 HTML <code>&lt;strong&gt;</code> 标签包裹。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">*single asterisks*</span></span><br><span class="line"><span class="emphasis">_single underscores_</span></span><br><span class="line"><span class="strong">**double asterisks**</span></span><br><span class="line"><span class="strong">__double underscores__</span></span><br></pre></td></tr></table></figure>
+
+<p>如果 <code>*</code> 或者 <code>_</code> 两边都有空格, 则会被视为星号和下划线的字面量，</p>
+<p>要使用星号和下划线字面量，需要进行转义，以区别于强调。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\*this text is surrounded by literal asterisks\*</span><br></pre></td></tr></table></figure>
+
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><p>用尖括号包围 URL 或 email 地址即可。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">http:</span>//<span class="attr">example.com</span>/&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="反斜杠转义"><a href="#反斜杠转义" class="headerlink" title="反斜杠转义"></a>反斜杠转义</h3><p>Markdown 为下面字符提供反斜杠转义。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\   backslash</span><br><span class="line">&#96;   backtick</span><br><span class="line">*   asterisk</span><br><span class="line">_   underscore</span><br><span class="line">&#123;&#125;  curly braces</span><br><span class="line">[]  square brackets</span><br><span class="line">()  parentheses</span><br><span class="line">#   hash mark</span><br><span class="line">+   plus sign</span><br><span class="line">-   minus sign (hyphen)</span><br><span class="line">.   dot</span><br><span class="line">!   exclamation mark</span><br></pre></td></tr></table></figure>
+
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p>好用的Markdown编辑器：<a href="https://typora.io/" target="_blank" rel="noopener">Typora</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://markdown-zh.readthedocs.io/en/latest/miscellaneous/" target="_blank" rel="noopener">Markdown中文文档</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Markdown</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello My Blog</title>
     <url>/2020/02/20/hello-world/</url>
     <content><![CDATA[<p>第一篇博客~</p>
