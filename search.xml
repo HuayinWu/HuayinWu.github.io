@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>LeetCode #1</title>
+    <url>/2020/02/22/Untitled/</url>
+    <content><![CDATA[<p>开启LeetCode刷题之旅~</p>
+<h2 id="Two-Sum"><a href="#Two-Sum" class="headerlink" title="Two Sum"></a>Two Sum</h2><p><strong>Tags:</strong> 哈希表</p>
+<p><strong>Difficulty:</strong> Easy</p>
+<a id="more"></a>
+
+<h4 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h4><blockquote>
+<p>Given an array of integers, return <strong>indices</strong>（下标） of the two numbers such that they add up to a specific target.</p>
+<p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the <em>same</em> element twice.</p>
+</blockquote>
+<h4 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h4><blockquote>
+<p>Given nums = [2, 7, 11, 15], target = 9,</p>
+<p>Because nums[0] + nums[1] = 2 + 7 = 9,<br>return [0, 1].</p>
+</blockquote>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><h4 id="Approach-1：暴力法"><a href="#Approach-1：暴力法" class="headerlink" title="Approach 1：暴力法"></a>Approach 1：暴力法</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] result = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; nums.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (j = i + <span class="number">1</span>; j &lt; nums.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[i] + nums[j] == target) &#123;</span><br><span class="line">                    result[<span class="number">0</span>] = i;</span><br><span class="line">                    result[<span class="number">1</span>] = j;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析：</strong></p>
+<ul>
+<li>时间复杂度：O(n^2)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+<p>参考<a href="https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-2/" target="_blank" rel="noopener">官方题解</a>后，我觉得可以将<code>return</code>语句改写为</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i,j&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Approach-2：哈希表"><a href="#Approach-2：哈希表" class="headerlink" title="Approach 2：哈希表"></a>Approach 2：哈希表</h4><p>如果要进行两次迭代，第一次迭代，把每个元素的值和它的索引添加到表中。第二次迭代，检查每个元素所对应的目标元素是否存在于表中，并且由题可知，目标元素不能是nums[i]本身。</p>
+<p>但是，可以只进行一次迭代，即在进行迭代并将元素插入到表中的同时，回过头来检查表中是否已经存在当前元素所对应的目标元素。</p>
+<p>只进行一次迭代的方式要注意结果的<strong>顺序</strong>是目标元素的下标在前。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> s = target - nums[i];</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(s)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(s), i&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析：</strong></p>
+<ul>
+<li><p>时间复杂度：O(n)</p>
+<p>只遍历了包含有n个元素的列表一次。在表中进行的每次查找只花费O(1)的时间。</p>
+</li>
+<li><p>空间复杂度：O(n)</p>
+<p>所需的额外空间取决于哈希表中存储的元素数量，该表最多需要存储n个元素。</p>
+</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-2/" target="_blank" rel="noopener">LeetCode</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>哈希表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown学习笔记</title>
     <url>/2020/02/21/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><a id="more"></a>
