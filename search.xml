@@ -4,15 +4,16 @@
     <title>LeetCode #1</title>
     <url>/2020/02/22/Untitled/</url>
     <content><![CDATA[<p>开启LeetCode刷题之旅~</p>
-<h2 id="Two-Sum"><a href="#Two-Sum" class="headerlink" title="Two Sum"></a>Two Sum</h2><p><strong>Tags:</strong> 哈希表</p>
+<p><strong>Title:</strong> Two Sum</p>
+<p><strong>Tags:</strong> 哈希表</p>
 <p><strong>Difficulty:</strong> Easy</p>
 <a id="more"></a>
-
-<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><blockquote>
+<h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><blockquote>
 <p>Given an array of integers, return <strong>indices</strong>（下标） of the two numbers such that they add up to a specific target.</p>
 <p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the <em>same</em> element twice.</p>
 </blockquote>
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h3><blockquote>
+<p>Example:</p>
+<blockquote>
 <p>Given nums = [2, 7, 11, 15], target = 9,</p>
 <p>Because nums[0] + nums[1] = 2 + 7 = 9,<br>return [0, 1].</p>
 </blockquote>
@@ -25,7 +26,6 @@
 </ul>
 <p>参考<a href="https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-2/" target="_blank" rel="noopener">官方题解</a>后，我觉得可以将<code>return</code>语句改写为</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i,j&#125;;</span><br></pre></td></tr></table></figure>
-
 <h3 id="Approach-2：哈希表"><a href="#Approach-2：哈希表" class="headerlink" title="Approach 2：哈希表"></a>Approach 2：哈希表</h3><p>如果要进行两次迭代，第一次迭代，把每个元素的值和它的索引添加到表中。第二次迭代，检查每个元素所对应的目标元素是否存在于表中，并且由题可知，目标元素不能是nums[i]本身。</p>
 <p>但是，可以只进行一次迭代，即在进行迭代并将元素插入到表中的同时，回过头来检查表中是否已经存在当前元素所对应的目标元素。</p>
 <p>只进行一次迭代的方式要注意结果的<strong>顺序</strong>是目标元素的下标在前。</p>
