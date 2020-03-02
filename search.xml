@@ -81,7 +81,7 @@
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
 <li><a href="https://leetcode.com/articles/implement-queue-using-stacks/" target="_blank" rel="noopener">LeetCode</a></li>
 <li><a href="https://leetcode.com/problems/implement-queue-using-stacks/discuss/64206/Short-O(1)-amortized-C%2B%2B-Java-Ruby" target="_blank" rel="noopener">Short O(1) amortized, C++ / Java / Ruby</a></li>
-<li>[Leetcode 题解 - 栈和队列]([<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.md#2-%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88]">https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.md#2-%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88]</a>(<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode">https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode</a> 题解 - 栈和队列.md#2-用队列实现栈))</li>
+<li><a href="https://github.com/CyC2018/CS-Notes/blob/master/notes">Leetcode 题解 - 栈和队列</a></li>
 </ul>
 ]]></content>
       <categories>
