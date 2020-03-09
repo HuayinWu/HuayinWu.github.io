@@ -6,4 +6,9 @@
 
 ### LeetCode
 
-- LeetCode #1
+- [LeetCode #232](https://huayinwu.github.io/2020/03/02/LeetCode-232/)
+
+### Hexo
+
+- [添加README.md并部署到GitHub](https://huayinwu.github.io/2020/03/06/Untitled/)
+
